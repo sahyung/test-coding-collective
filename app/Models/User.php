@@ -3,13 +3,20 @@
 namespace App\Models;
 
 use App\Traits\UuidsTrait;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Uuid;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use Notifiable, UuidsTrait;
+    use Notifiable, UuidsTrait, SoftDeletes;
+
+    public function __construct()
+    {
+        $this->id = Uuid::generate(4)->string;
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -38,6 +45,8 @@ class User extends Authenticatable implements JWTSubject
         'id' => 'string',
         'email_verified_at' => 'datetime',
     ];
+
+    public $incrementing = false;
 
     public function getJWTIdentifier()
     {
