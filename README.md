@@ -35,9 +35,12 @@ eg for leveling sistem :
     Resume. ex : only pdf file
     ```
 
-5.  build API to fetch all, add, edit, and delete data Candidate. :white_check_mark:
+5. build API to fetch all, add, edit, and delete data Candidate. :white_check_mark:
+
     completed with OAUTH2. :x:
+    
     create using laravel and with swagger :warning:
+
 6. create unit testing using phpunit laravel :x:
 
 ## Api Documentation
