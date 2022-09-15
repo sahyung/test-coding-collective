@@ -39,3 +39,7 @@ eg for leveling sistem :
     completed with OAUTH2. :x:
     create using laravel and with swagger :warning:
 6. create unit testing using phpunit laravel :x:
+
+## Api Documentation
+
+Import `Coding-Collective.postman_collection.json` to [Postman](https://www.postman.com/downloads/)

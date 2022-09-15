@@ -1,0 +1,1392 @@
+{
+	"info": {
+		"_postman_id": "3ee18ebe-4a24-4147-bf30-85f0e9ffa6ad",
+		"name": "Coding Collective",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "68652"
+	},
+	"item": [
+		{
+			"name": "Candidate",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "John Wick",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "UGM Yogyakarta",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1991-01-19",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "5 Year",
+									"type": "text"
+								},
+								{
+									"key": "last_position",
+									"value": "Developer",
+									"type": "text"
+								},
+								{
+									"key": "applied_position",
+									"value": "Manager",
+									"type": "text"
+								},
+								{
+									"key": "top_skills",
+									"value": "Laravel, Mysql, PostgreSQL, Codeigniter, Java",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jhon.wick+2@test.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "0851234567892",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/candidates",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"candidates"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "John Wick",
+											"type": "text"
+										},
+										{
+											"key": "education",
+											"value": "UGM Yogyakarta",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "1991-01-19",
+											"type": "text"
+										},
+										{
+											"key": "experience",
+											"value": "5 Year",
+											"type": "text"
+										},
+										{
+											"key": "last_position",
+											"value": "Developer",
+											"type": "text"
+										},
+										{
+											"key": "applied_position",
+											"value": "Manager",
+											"type": "text"
+										},
+										{
+											"key": "top_skills",
+											"value": "Laravel, Mysql, PostgreSQL, Codeigniter, Java",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jhon.wick+3@test.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0851234567893",
+											"type": "text"
+										},
+										{
+											"key": "resume",
+											"type": "file",
+											"src": "/Users/sahyung/Downloads/Telegram Desktop/Test Backend (Long Version).pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/candidates",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:30:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:30:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"response.success_store_data\",\n    \"data\": {\n        \"id\": \"32856015-c2a6-4a02-b0c7-79112ff7bc9b\",\n        \"resume\": \"http://localhost:8080/storage/resumes/32856015-c2a6-4a02-b0c7-79112ff7bc9b_6323612c65275.pdf\",\n        \"name\": \"John Wick\",\n        \"education\": \"UGM Yogyakarta\",\n        \"date_of_birth\": \"1991-01-19\",\n        \"experience\": \"5 Year\",\n        \"last_position\": \"Developer\",\n        \"applied_position\": \"Manager\",\n        \"top_skills\": \"Laravel, Mysql, PostgreSQL, Codeigniter, Java\",\n        \"email\": \"jhon.wick+3@test.com\",\n        \"phone_number\": \"0851234567893\",\n        \"updated_at\": \"2022-09-15 17:30:20\",\n        \"created_at\": \"2022-09-15 17:30:20\"\n    },\n    \"success\": true\n}"
+						},
+						{
+							"name": "422",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "John Wick",
+											"type": "text"
+										},
+										{
+											"key": "education",
+											"value": "UGM Yogyakarta",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "1991-01-19",
+											"type": "text"
+										},
+										{
+											"key": "experience",
+											"value": "5 Year",
+											"type": "text"
+										},
+										{
+											"key": "last_position",
+											"value": "Developer",
+											"type": "text"
+										},
+										{
+											"key": "applied_position",
+											"value": "Manager",
+											"type": "text"
+										},
+										{
+											"key": "top_skills",
+											"value": "Laravel, Mysql, PostgreSQL, Codeigniter, Java",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jhon.wick+2@test.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0851234567892",
+											"type": "text"
+										},
+										{
+											"key": "resume",
+											"type": "file",
+											"src": "/Users/sahyung/Downloads/Telegram Desktop/Test Backend (Long Version).pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/candidates",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:27:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:27:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"phone_number\": [\n            \"The phone number has already been taken.\"\n        ],\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Read One",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/candidates/aa6e9daf-4a61-47ff-8f9f-97ab172605ce",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidates",
+								"aa6e9daf-4a61-47ff-8f9f-97ab172605ce"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/candidates/aa6e9daf-4a61-47ff-8f9f-97ab172605ce",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates",
+										"aa6e9daf-4a61-47ff-8f9f-97ab172605ce"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:16:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:16:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"response.success_get_data\",\n    \"data\": {\n        \"id\": \"aa6e9daf-4a61-47ff-8f9f-97ab172605ce\",\n        \"name\": \"John Wick\",\n        \"education\": \"UGM Yogyakarta\",\n        \"date_of_birth\": \"1991-01-19\",\n        \"experience\": \"5 Year\",\n        \"last_position\": \"Developer\",\n        \"applied_position\": \"Manager\",\n        \"top_skills\": \"Laravel, Mysql, PostgreSQL, Codeigniter, Java\",\n        \"email\": \"jhon.wick+2@test.com\",\n        \"phone_number\": \"0851234567892\",\n        \"resume\": null,\n        \"deleted_at\": \"2022-09-15T17:16:39.816124Z\",\n        \"created_at\": \"2022-09-15 16:02:01\",\n        \"updated_at\": \"2022-09-15 17:16:39\"\n    },\n    \"success\": true\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/candidates/aa6e9daf-4a61-47ff-8f9f-97ab172605ce",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates",
+										"aa6e9daf-4a61-47ff-8f9f-97ab172605ce"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 16:51:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 16:51:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"response.error_not_found\",\n    \"errors\": [],\n    \"code\": 404,\n    \"success\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Read Many",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/candidates?page=2&per_page=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidates"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "per_page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/candidates?page=2&per_page=2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "per_page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:16:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:16:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"response.success_get_data\",\n    \"data\": {\n        \"total\": 3,\n        \"candidates\": [\n            {\n                \"id\": \"feffe952-f576-47d9-88cd-65d5d17b582c\",\n                \"name\": \"John Wick KW\",\n                \"education\": \"UGM Yogyakarta\",\n                \"date_of_birth\": \"1991-01-19\",\n                \"experience\": \"1000 tahun\",\n                \"last_position\": \"kuli\",\n                \"applied_position\": \"mandor\",\n                \"top_skills\": \"sok sibuk lagi\",\n                \"email\": \"jhon.wick@test.com\",\n                \"phone_number\": \"085123456789\",\n                \"resume\": \"http://localhost:8080/storage/resumes/feffe952-f576-47d9-88cd-65d5d17b582c_6323573a2e3e2.pdf\",\n                \"deleted_at\": null,\n                \"created_at\": \"2022-09-15 15:40:29\",\n                \"updated_at\": \"2022-09-15 16:48:15\"\n            }\n        ]\n    },\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "John Wick",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "UGM Yogyakarta",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "1991-01-19",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "50 Year",
+									"type": "text"
+								},
+								{
+									"key": "last_position",
+									"value": "Developer",
+									"type": "text"
+								},
+								{
+									"key": "applied_position",
+									"value": "Manager",
+									"type": "text"
+								},
+								{
+									"key": "top_skills",
+									"value": "Laravel, Mysql, PostgreSQL, Codeigniter, Java",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jhon.wick+4@test.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "0851234567894",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/candidates/32856015-c2a6-4a02-b0c7-79112ff7bc9b?_method=PUT",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidates",
+								"32856015-c2a6-4a02-b0c7-79112ff7bc9b"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "John Wick",
+											"type": "text"
+										},
+										{
+											"key": "education",
+											"value": "UGM Yogyakarta",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "1991-01-19",
+											"type": "text"
+										},
+										{
+											"key": "experience",
+											"value": "50 Year",
+											"type": "text"
+										},
+										{
+											"key": "last_position",
+											"value": "Developer",
+											"type": "text"
+										},
+										{
+											"key": "applied_position",
+											"value": "Manager",
+											"type": "text"
+										},
+										{
+											"key": "top_skills",
+											"value": "Laravel, Mysql, PostgreSQL, Codeigniter, Java",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jhon.wick+4@test.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0851234567894",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/candidates/32856015-c2a6-4a02-b0c7-79112ff7bc9b?_method=PUT",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates",
+										"32856015-c2a6-4a02-b0c7-79112ff7bc9b"
+									],
+									"query": [
+										{
+											"key": "_method",
+											"value": "PUT"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:33:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:33:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"response.success_update_data\",\n    \"data\": {\n        \"id\": \"32856015-c2a6-4a02-b0c7-79112ff7bc9b\",\n        \"name\": \"John Wick\",\n        \"education\": \"UGM Yogyakarta\",\n        \"date_of_birth\": \"1991-01-19\",\n        \"experience\": \"50 Year\",\n        \"last_position\": \"Developer\",\n        \"applied_position\": \"Manager\",\n        \"top_skills\": \"Laravel, Mysql, PostgreSQL, Codeigniter, Java\",\n        \"email\": \"jhon.wick+4@test.com\",\n        \"phone_number\": \"0851234567894\",\n        \"resume\": \"http://localhost:8080/storage/resumes/32856015-c2a6-4a02-b0c7-79112ff7bc9b_6323612c65275.pdf\",\n        \"deleted_at\": null,\n        \"created_at\": \"2022-09-15 17:30:20\",\n        \"updated_at\": \"2022-09-15 17:33:50\"\n    },\n    \"success\": true\n}"
+						},
+						{
+							"name": "422",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "John Wick",
+											"type": "text"
+										},
+										{
+											"key": "education",
+											"value": "UGM Yogyakarta",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "1991-01-19",
+											"type": "text"
+										},
+										{
+											"key": "experience",
+											"value": "5 Year",
+											"type": "text"
+										},
+										{
+											"key": "last_position",
+											"value": "Developer",
+											"type": "text"
+										},
+										{
+											"key": "applied_position",
+											"value": "Manager",
+											"type": "text"
+										},
+										{
+											"key": "top_skills",
+											"value": "Laravel, Mysql, PostgreSQL, Codeigniter, Java",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "jhon.wick+2@test.com",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0851234567892",
+											"type": "text"
+										},
+										{
+											"key": "resume",
+											"type": "file",
+											"src": "/Users/sahyung/Downloads/Telegram Desktop/Test Backend (Long Version).pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/candidates/32856015-c2a6-4a02-b0c7-79112ff7bc9b?_method=PUT",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates",
+										"32856015-c2a6-4a02-b0c7-79112ff7bc9b"
+									],
+									"query": [
+										{
+											"key": "_method",
+											"value": "PUT"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:27:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:27:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"phone_number\": [\n            \"The phone number has already been taken.\"\n        ],\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/candidates/aa6e9daf-4a61-47ff-8f9f-97ab172605ce",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"candidates",
+								"aa6e9daf-4a61-47ff-8f9f-97ab172605ce"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/candidates/aa6e9daf-4a61-47ff-8f9f-97ab172605ce",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates",
+										"aa6e9daf-4a61-47ff-8f9f-97ab172605ce"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:16:39 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 17:16:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"response.success_delete_data\",\n    \"data\": {\n        \"id\": \"aa6e9daf-4a61-47ff-8f9f-97ab172605ce\",\n        \"name\": \"John Wick\",\n        \"education\": \"UGM Yogyakarta\",\n        \"date_of_birth\": \"1991-01-19\",\n        \"experience\": \"5 Year\",\n        \"last_position\": \"Developer\",\n        \"applied_position\": \"Manager\",\n        \"top_skills\": \"Laravel, Mysql, PostgreSQL, Codeigniter, Java\",\n        \"email\": \"jhon.wick+2@test.com\",\n        \"phone_number\": \"0851234567892\",\n        \"resume\": null,\n        \"deleted_at\": \"2022-09-15T17:16:39.816124Z\",\n        \"created_at\": \"2022-09-15 16:02:01\",\n        \"updated_at\": \"2022-09-15 17:16:39\"\n    },\n    \"success\": true\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/candidates/aa6e9daf-4a61-47ff-8f9f-97ab172605ce",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"candidates",
+										"aa6e9daf-4a61-47ff-8f9f-97ab172605ce"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8080"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 16:51:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 Sep 2022 16:51:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.30"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"response.error_not_found\",\n    \"errors\": [],\n    \"code\": 404,\n    \"success\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"if (jsonData.hasOwnProperty('access_token')) {",
+							"    pm.globals.set(\"access_token\", jsonData.access_token);",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"shr@test.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"shr@test.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Sep 2022 16:39:24 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 15 Sep 2022 16:39:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjMyNTk5NjQsImV4cCI6MTY2MzI2MzU2NCwibmJmIjoxNjYzMjU5OTY0LCJqdGkiOiJvbjI4VHNnS2lobWw0V3cwIiwic3ViIjoiYjM0YmI3YjAtMDBlZS00OWIwLTk2ZTItYmU5MjVkNDU3ZjkyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.W_cRV-LzBbqCf7GoTmDi-28lZ7f4EGjG_FmiAxPnOL4\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var jsonData = pm.response.json();",
+					"if (jsonData.hasOwnProperty('access_token')) {",
+					"    pm.globals.set(\"access_token\", jsonData.access_token);",
+					"}"
+				]
+			}
+		}
+	]
+}
