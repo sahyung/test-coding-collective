@@ -2,15 +2,18 @@
 
 namespace App\Http\Middleware;
 
+use App\Traits\ResponseJsonTrait;
 use Closure;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 
 class Authenticate extends Middleware
 {
+    use ResponseJsonTrait;
+
     public function handle($request, Closure $next, ...$guards)
     {
         if ($this->authenticate([$request], $guards) === 'authentication_error') {
-            return response()->json(['error'=>'Unauthorized']);
+            return $this->responseError('unauthenticated');
         }
         return $next($request);
     }

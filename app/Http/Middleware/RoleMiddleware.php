@@ -4,12 +4,10 @@ namespace App\Http\Middleware;
 
 use App\Traits\ResponseJsonTrait;
 use Closure;
-use Illuminate\Support\Facades\Auth;
 
-class CheckIsAdmin
+class RoleMiddleware
 {
     use ResponseJsonTrait;
-
     /**
      * Handle an incoming request.
      *
@@ -17,11 +15,12 @@ class CheckIsAdmin
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, ...$roles)
     {
-        if (in_array(Auth::user()->role, ['superadmin', 'admin'])) {
-            return $next($request);
+        if (!in_array(auth()->user()->role, $roles)) {
+            return $this->responseError('forbidden');
         }
-        return $this->responseError('forbidden');
+
+        return $next($request);
     }
 }

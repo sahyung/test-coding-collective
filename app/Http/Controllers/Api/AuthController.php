@@ -9,25 +9,24 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
-use Uuid;
+
 class AuthController extends Controller
 {
     public function register(Request $request)
     {
         $user = new User();
-        
+
         $v = Validator::make($request->all(), [
             'email' => 'required|email|unique:users',
             'password'  => 'required|min:3|confirmed',
         ]);
-        if ($v->fails())
-        {
+        if ($v->fails()) {
             return response()->json([
                 'status' => 'error',
                 'errors' => $v->errors()
             ], 422);
         }
-        
+
         $user->fill(array_merge(
             $request->only($user->getFillable()),
             [
@@ -111,10 +110,10 @@ class AuthController extends Controller
      */
     public function forgot(Request $request)
     {
-        $user = new User;
+        $user = new User();
 
         $user = $user->where('email', $request->email)->first();
-        if ( ! empty($user)) {
+        if (! empty($user)) {
             $data    = $user;
             $id      = $data->id;
             $expired = time() + (60 * 60); // one hour expiry
@@ -132,7 +131,6 @@ class AuthController extends Controller
                 "message" => 'Email not found in database',
             ], 201);
         }
-
     }
 
     /**
@@ -144,7 +142,6 @@ class AuthController extends Controller
      */
     public function reset(Request $request)
     {
-
         $data            = [];
         $data["success"] = false;
         $data["reset"]   = false;
@@ -158,10 +155,8 @@ class AuthController extends Controller
             $key = explode(",", $decrypted);
 
             if ($id = $key[1] && time() <= $key[0]) {
-
                 if ($user = User::find($key[1])) {
                     if ($request->password) {
-
                         $user->password = Hash::make($request->password);
                         if ($user->save()) {
                             $data["success"] = true;
